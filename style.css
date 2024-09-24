@@ -125,7 +125,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+
   line-height: 0.1;
 }
 .calendar-weekdays div {
