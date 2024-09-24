@@ -112,7 +112,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   box-sizing: border-box;
@@ -123,9 +122,10 @@ body {
 .day-text {
   width: 18px;
   height: 18px;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
   line-height: 0.1;
 }
 .calendar-weekdays div {
@@ -204,4 +204,10 @@ button::-moz-focus-inner {
   margin-bottom: 0.625rem;
   color: red;
   height: 1.875rem;
+}
+
+@media (max-width: 500px) {
+  .day-text {
+    margin-top: -2px;
+  }
 }
