@@ -62,7 +62,6 @@ body {
 .calendar {
   background-color: #fff;
   border-radius: 0.938rem;
-  overflow: hidden;
 }
 
 .calender-container {
@@ -124,11 +123,10 @@ body {
 .day-text {
   width: 18px;
   height: 18px;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   line-height: 0.1;
-  border: 1px solid black;
 }
 .calendar-weekdays div {
   font-weight: 600;
