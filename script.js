@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Adjust first day to start from Saturday (shift to Saturday-based week)
     const adjustedFirstDay = firstDayOfMonth % 7;
 
+    // Previous month days
     for (let i = adjustedFirstDay - 1; i >= 0; i--) {
       const prevDayDiv = document.createElement("div");
       prevDayDiv.textContent = lastDateOfPrevMonth - i;
@@ -48,10 +49,18 @@ document.addEventListener("DOMContentLoaded", function () {
       calendarDays.appendChild(prevDayDiv);
     }
 
+    // Current month days
     for (let i = 1; i <= lastDateOfMonth; i++) {
       const dayDiv = document.createElement("div");
-      dayDiv.textContent = i;
       dayDiv.classList.add("calendar-day", "current-month-day");
+
+      // Create a nested div for the day text
+      const textDiv = document.createElement("div");
+      textDiv.textContent = i;
+      textDiv.classList.add("day-text"); // Add a class for styling
+
+      // Append textDiv inside dayDiv
+      dayDiv.appendChild(textDiv);
 
       // Check if the date should be highlighted
       const dateString = `${currentYear}-${(currentMonth + 1)
@@ -72,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalDays = adjustedFirstDay + lastDateOfMonth;
     const nextMonthDays = 42 - totalDays; // Ensure 6 rows are always rendered
 
+    // Next month days
     for (let i = 1; i <= nextMonthDays; i++) {
       const emptyDiv = document.createElement("div");
       emptyDiv.classList.add("calendar-day", "next-month-day");
