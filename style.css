@@ -111,14 +111,14 @@ body {
 .calendar-weekdays div,
 .calendar-days div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   box-sizing: border-box;
   margin-bottom: 0.313rem;
   font-size: 1rem;
-  line-height: 0.9;
 }
 .calendar-weekdays div {
   font-weight: 600;
