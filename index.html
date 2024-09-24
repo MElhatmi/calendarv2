@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="direct-container">
+        <div class="desired-date">Select a desired date</div>
+        <div class="highlighted-title">
+          Only highlighted dates are currently available
+        </div>
+        <div class="calender-container">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button id="prevMonth" aria-label="Previous Month">
+                <img class="arrow" src="left arrow.svg" width="13.59" alt="" />
+              </button>
+              <div id="monthYear"></div>
+              <button id="nextMonth" aria-label="Next Month">
+                <img class="arrow" src="right arrow.svg" width="13.59" alt="" />
+              </button>
+            </div>
+            <div class="calendar-body">
+              <div class="calendar-weekdays">
+                <div class="calendar-weekday">Su</div>
+                <div class="calendar-weekday">Mo</div>
+                <div class="calendar-weekday">Tu</div>
+                <div class="calendar-weekday">We</div>
+                <div class="calendar-weekday">Th</div>
+                <div class="calendar-weekday">Fr</div>
+                <div class="calendar-weekday">Sa</div>
+              </div>
+              <div class="calendar-days" id="calendarDays">
+                <!-- Days will be dynamically generated here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="error-message" class="error-message"></div>
+        <div class="buttons-container">
+          <button id="not-interested" class="not-interested-button">
+            Not interested
+          </button>
+          <button id="continue-button" class="continue-button">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-Regular.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-Regular.woff") format("woff"),
+    url("fonts/GreycliffCF-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-DemiBold.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-DemiBold.woff") format("woff"),
+    url("greycliff/GreycliffCF-DemiBold.ttf") format("truetype");
+  font-weight: 600; /* DemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-Bold.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-Bold.woff") format("woff"),
+    url("greycliff/GreycliffCF-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* h reset */
+body {
+  font-family: "GreycliffCF", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  width: min(400px, 90%);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.direct-container {
+  width: 90%;
+}
+.desired-date {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00a4b6;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.highlighted-title {
+  color: #454545;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.calendar {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.calender-container {
+  margin-bottom: 12px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00a4b6;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px 22px;
+  /* background-color: #007bff;
+  color: #fff;*/
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  /*  color: #fff;*/
+  cursor: pointer;
+}
+
+.calendar-body {
+  padding: 0 10px;
+  /*padding-bottom: 5px;*/
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+  grid-template-rows: repeat(6, 1fr); /* 6 equal rows */
+  gap: 10px; /* Optional: Add spacing between the cells */
+  justify-content: center;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+  gap: 10px; /* Optional: Add spacing between the cells */
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.calendar-weekdays div,
+.calendar-days div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+.calendar-weekdays div {
+  font-weight: 600;
+}
+.current-month-day {
+  cursor: pointer;
+  color: #454545;
+}
+/*
+.calendar-days .current-month-day:hover,
+.selected-date {
+  background-color: #49a1b3;
+  color: #fff !important;
+}*/
+
+.prev-month-day,
+.next-month-day {
+  color: #d6d6d6;
+}
+
+.next-month-day {
+  border: none;
+  cursor: default; /* Remove pointer cursor */
+}
+
+.highlighted-date {
+  border: 1px solid #00a4b6;
+  color: #00a4b6;
+  font-weight: 600;
+}
+.selected-date,
+.highlighted-date:hover {
+  background-color: #49a1b3;
+  color: white;
+}
+/* button */
+button {
+  border: 0;
+  padding: 0;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container button {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.not-interested-button {
+  /*margin-top: 20px;*/
+  background-color: #737373;
+}
+
+.continue-button {
+  margin-top: 10px;
+  background-color: #00a4b6;
+}
+/*.calendar-days .next-month-day {
+  display: none;
+  margin-bottom: 0;
+}
+*/
+.error-message {
+  margin-bottom: 10px;
+  color: red;
+  height: 30px;
+}
+
+@media (max-height: 667px) {
+  .calendar-weekdays div,
+  .calendar-days div {
+    margin: 1vh 2.14%;
+  }
+}
