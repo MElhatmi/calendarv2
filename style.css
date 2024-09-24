@@ -37,36 +37,36 @@ body {
 .container {
   text-align: center;
   background-color: #f4f4f4;
-  border-radius: 15px;
-  width: 370px;
+  border-radius: 0.938rem;
+  width: 23.125rem;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
 }
 .direct-container {
-  width: 340px;
+  width: 21.25rem;
 }
 .desired-date {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #00a4b6;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: 0.625rem;
+  margin-top: 1.25rem;
 }
 .highlighted-title {
   color: #454545;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
   font-weight: normal;
 }
 .calendar {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 0.938rem;
   overflow: hidden;
 }
 
 .calender-container {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .calendar-header {
@@ -75,8 +75,8 @@ body {
   align-items: center;
   color: #00a4b6;
   font-weight: bold;
-  font-size: 16px;
-  padding: 20px 22px;
+  font-size: 1rem;
+  padding: 1.25rem 1.375rem;
   /* background-color: #007bff;
   color: #fff;*/
 }
@@ -89,7 +89,7 @@ body {
 }
 
 .calendar-body {
-  padding: 0 10px;
+  padding: 0 0.625rem;
   /*padding-bottom: 5px;*/
 }
 
@@ -97,16 +97,16 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
   grid-template-rows: repeat(6, 1fr); /* 6 equal rows */
-  gap: 10px; /* Optional: Add spacing between the cells */
+  gap: 0.625rem; /* Optional: Add spacing between the cells */
   justify-content: center;
 }
 
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  gap: 10px; /* Optional: Add spacing between the cells */
+  gap: 0.625rem; /* Optional: Add spacing between the cells */
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .calendar-weekdays div,
 .calendar-days div {
@@ -116,8 +116,8 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   box-sizing: border-box;
-  margin-bottom: 5px;
-  font-size: 16px;
+  margin-bottom: 0.313rem;
+  font-size: 1rem;
 }
 .calendar-weekdays div {
   font-weight: 600;
@@ -169,10 +169,10 @@ button::-moz-focus-inner {
 
 .buttons-container button {
   width: 100%;
-  padding: 15px;
+  padding: 0.938rem;
   color: white;
-  border-radius: 15px;
-  font-size: 18px;
+  border-radius: 0.938rem;
+  font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
 }
@@ -183,7 +183,7 @@ button::-moz-focus-inner {
 }
 
 .continue-button {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   background-color: #00a4b6;
 }
 /*.calendar-days .next-month-day {
@@ -192,7 +192,7 @@ button::-moz-focus-inner {
 }
 */
 .error-message {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: red;
-  height: 30px;
+  height: 1.875rem;
 }
